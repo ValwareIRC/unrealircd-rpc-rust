@@ -93,4 +93,4 @@ The library uses the `Result<T>` type for error handling. All errors are wrapped
 
 ## License
 
-MIT
+GPLv3 or later
