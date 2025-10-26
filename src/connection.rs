@@ -78,6 +78,18 @@ impl Connection {
         }
     }
 
+    /// Get the URI (for testing purposes).
+    #[cfg(test)]
+    pub fn uri(&self) -> &str {
+        &self.uri
+    }
+
+    /// Get the auth header (for testing purposes).
+    #[cfg(test)]
+    pub fn auth_header(&self) -> &str {
+        &self.auth_header
+    }
+
     /// Establish the WebSocket connection.
     pub async fn connect(&mut self) -> Result<()> {
         let url = Url::parse(&self.uri)?;

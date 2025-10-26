@@ -55,8 +55,8 @@ mod tests {
             None,
         );
 
-        assert_eq!(conn.uri, "wss://127.0.0.1:8600/");
-        assert_eq!(conn.auth_header, "Basic dXNlcjpwYXNz"); // base64 encoded "user:pass"
+        assert_eq!(conn.uri(), "wss://127.0.0.1:8600/");
+        assert_eq!(conn.auth_header(), "Basic dXNlcjpwYXNz"); // base64 encoded "user:pass"
     }
 
     #[test]
