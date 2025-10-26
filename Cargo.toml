@@ -1,0 +1,26 @@
+[package]
+name = "unrealircd-rpc"
+version = "0.1.0"
+edition = "2021"
+description = "Rust client library for UnrealIRCd JSON-RPC interface"
+license = "MIT"
+repository = "https://github.com/ValwareIRC/unrealircd-rpc-rust"
+keywords = ["irc", "unrealircd", "rpc", "websocket", "json-rpc"]
+categories = ["api-bindings", "network-programming"]
+
+[dependencies]
+tokio = { version = "1.0", features = ["full"] }
+tokio-tungstenite = "0.20"
+futures-util = "0.3"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+base64 = "0.21"
+thiserror = "1.0"
+url = "2.4"
+reqwest = { version = "0.11", features = ["json"] }
+async-trait = "0.1"
+rand = "0.8"
+http = "0.2"
+
+[dev-dependencies]
+tokio-test = "0.4"
